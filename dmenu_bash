@@ -1,3 +1,5 @@
-DMENU="dmenu -l 0 -p terminal"
+#!/usr/bin/env bash
+
+DMENU="dmenu -l 0 -p exec"
 DMENU_EXEC_TEXT=$($DMENU)
 exec $DMENU_EXEC_TEXT

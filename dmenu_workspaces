@@ -1,17 +1,20 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 DMENU_TEXT="I\nII\nIII\nIV\nV\nVI\nVII\nVIII\nIX\nX"
 DMENU_OUTPUT=$( echo -e $DMENU_TEXT | dmenu -l 10 -p workspaces )
 
+alias chwr_b='bspc desktop --focus'
+alias chwr_i3='i3-msg workspace '
+
 case "$DMENU_OUTPUT" in
-	I)i3-msg workspace I     ;;
-	II)i3-msg workspace II   ;;
-	III)i3-msg workspace III ;;
-	IV)i3-msg workspace IV   ;;
-	V)i3-msg workspace V     ;;
-	VI)i3-msg workspace VI   ;;
-	VII)i3-msg workspace VII ;;
-	VIII)i3-msg workspace VIII ;;
-	IX)i3-msg workspace IX   ;;
-	X)i3-msg workspace X     ;;
+	I)    chwr_b ^1   ;;
+	II)   chwr_b ^2   ;;
+	III)  chwr_b ^3   ;;
+	IV)   chwr_b ^4   ;;
+	V)    chwr_b ^5   ;;
+	VI)   chwr_b ^6   ;;
+	VII)  chwr_b ^7   ;;
+	VIII) chwr_b ^8   ;;
+	IX)   chwr_b ^9   ;;
+	X)    chwr_b ^10  ;;
 esac
